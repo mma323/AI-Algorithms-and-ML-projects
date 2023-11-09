@@ -29,7 +29,7 @@ def mean_scores() -> dict:
     return mean_scores
 
 
-def find_variation(person, show):
+def find_variation(person : str, show  : str) -> float:
     """
     Takes in the key of a person in the person_scores dictionary 
     and the name of a show the person has watched and returns the
@@ -43,3 +43,21 @@ def find_variation(person, show):
     variation = scores[show] - mean_score
 
     return variation
+
+
+def variations() -> dict:
+    """
+    Returns a dictionary of dictionaries with the variation of each show for each person
+    by calling the find_variation function for each person and show
+    in the person_scores dictionary and storing the results
+    in a new dictionary of dictionaries
+    """
+
+    variations = {}
+
+    for person in person_scores:
+        variations[person] = {}
+        for show in person_scores[person]:
+            variations[person][show] = find_variation(person, show)
+
+    return variations
