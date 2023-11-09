@@ -1,6 +1,6 @@
 from person_scores import person_scores
 
-def find_mean_score(person):
+def find_mean_score(person : str) -> float:
     """
     Takes in the key of a person in the person_scores dictionary 
     and returns the mean score of that person
@@ -8,14 +8,17 @@ def find_mean_score(person):
 
     scores : dict = person_scores[person]
     
-    mean_score = sum( scores.values() ) / len(scores)
+    mean_score : float = sum( scores.values() ) / len(scores)
 
     return mean_score
 
 
-def create_mean_scores_dictionary():
+def mean_scores() -> dict:
     """
     Returns a dictionary with the mean scores of each person
+    by calling the find_mean_score function for each person
+    in the person_scores dictionary and storing the results
+    in a new dictionary
     """
 
     mean_scores = {}
