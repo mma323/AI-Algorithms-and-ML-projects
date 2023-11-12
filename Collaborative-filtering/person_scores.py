@@ -1,3 +1,5 @@
+SHOWS = ["vikings", "breaking bad", "the sopranos", "westworld", "game of thrones", "the witcher", "skam", "les bureau"]
+
 person_scores = {
     "person 1": {
         "vikings": 5,
@@ -54,5 +56,13 @@ person_scores = {
         "breaking bad": 1,
         "game of thrones": 2,
         "the witcher": 1,
+    },
+    "new person": {
+        "vikings" : 3,
+        "breaking bad": 2,
+        "the sopranos": 3,
+        "game of thrones" : 4,
+        "the witcher" : 1,
+        "les bureau" : 5,
     },
 }
